@@ -1,4 +1,4 @@
-# Into to Stochastic Processes 2nd Edition Solutions (Tex)
+# Intro to Stochastic Processes 2nd Edition Solutions (Tex)
 Compilation of the many solutions out there for Intro to Stochastic Processes 2nd Edition by Gregory F. Lawler
 
 -After taking a course in Stochastic Processes I wanted to create a compilation of all the solutions I had found over the semester from the various sources. 
