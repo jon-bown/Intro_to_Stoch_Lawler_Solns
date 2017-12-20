@@ -1,0 +1,276 @@
+% --------------------------------------------------------------
+  % This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+
+\documentclass[12pt]{book}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb,hyperref}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\hypersetup{
+bookmarks=true,
+unicode=true,
+pdftitle={Jonathan Bown}
+}
+
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{solution}
+               {\let\oldqedsymbol=\qedsymbol
+                \renewcommand{\qedsymbol}{$\blacktriangleleft$}
+                \begin{proof}[\bfseries\upshape Solution]}
+               {\end{proof}
+                \renewcommand{\qedsymbol}{\oldqedsymbol}}
+
+
+\newcommand{\prb}[1]{\textbf{Exercise #1.}}
+
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+\title{Solutions Manual for Gregory F. Lawler's \\ \emph{Introduction to Stochastic Processes}}%replace X with the appropriate number
+\author{Jonathan Bown}
+\date{}
+
+\maketitle
+
+\part{}
+
+\chapter{Finite Markov Chains}
+
+
+
+%-------------
+%      Notation for Exercises
+%-------------
+\begin{problem}{1.1}
+\end{problem}
+
+
+\begin{problem}{1.2}
+Consider a Markov chain with state space {0,1} and transition matrix\\
+\begin{center}
+$\bf{P} = \begin{bmatrix}
+    1/3 & 2/3 \\
+    3/4 & 1/4 
+\end{bmatrix}$
+\end{center}
+Assuming that the chain starts in state $0$ at time $n = 0$, what is the probability that it is in state 1 at time $n=3$?
+\end{problem}
+\begin{solution}
+This is just some basic matrix multiplication. The chain starts in state 0 at time $n = 0$ so we will look at the first row of the matrix $\bf{P}^3$. 
+\end{solution}
+
+
+\begin{problem}{1.3}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+\begin{problem}{1.4}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+
+\begin{problem}{1.5}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.6}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+
+\begin{problem}{1.7}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.8}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+\begin{problem}{1.9}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.10}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+\begin{problem}{1.11}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.12}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.13}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.14}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.15}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.16}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.17}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.18}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.19}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.20}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}{1.21}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+
+\chapter{Countable Markov Chains}
+
+\begin{problem}{2.1}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+
+\chapter{Continuous-Time Markov Chains}
+
+\begin{problem}{3.1}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+
+
+\chapter{Optimal Stopping}
+
+\begin{problem}{4.1}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+
+
+
+\chapter{Martingales}
+
+\begin{problem}{5.1}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+
+\chapter{Renewal Processes}
+
+\begin{problem}{6.1}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+
+
+\chapter{Reversible Markov Chains}
+
+\begin{problem}{7.1}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+
+\chapter{Brownian Motion}
+
+\begin{problem}{8.1}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+
+
+
+
+\chapter{Stochastic Integration}
+
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+
+\end{document}
