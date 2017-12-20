@@ -6,7 +6,7 @@
 \documentclass[12pt]{book}
 
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amsthm,amssymb,hyperref}
+\usepackage{amsmath,amsthm,amssymb,hyperref,blkarray}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -32,7 +32,7 @@ pdftitle={Jonathan Bown}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 \newenvironment{solution}
                {\let\oldqedsymbol=\qedsymbol
-                \renewcommand{\qedsymbol}{$\blacktriangleleft$}
+                \renewcommand{\qedsymbol}{$\square$}
                 \begin{proof}[\bfseries\upshape Solution]}
                {\end{proof}
                 \renewcommand{\qedsymbol}{\oldqedsymbol}}
@@ -98,6 +98,37 @@ This is just some basic matrix multiplication. The chain starts in state 0 at ti
 \begin{problem}{1.5}
 \end{problem}
 \begin{solution}
+(1) Recurrent classes: $\{0,1\}, \{2,4\}$. Transient class: $\{3,5\}$ \\
+(2) To analyze large time behavior of the Markov chain on the class $R_{1} = \{0,1\}$, we need only to consider its matrix 
+\begin{center}
+$ \bf{P}_{\{0,1\}} = 
+    \bordermatrix{ & 0 & 1 \cr
+      0 & 0.5 & 0.5 \cr
+      1 & 0.3 & 0.7 } \qquad
+      $
+\end{center}
+Solving $\pi \bf{P}_{\{0,1\}} = \pi$ we get its invariant probability $\pi = (\frac{3}{8}, \frac{5}{8})$. Then $lim_{n \to \infty} P_{n}(0,0) = \frac{3}{8}$. \\
+
+(3) To find $lim_{n \to \infty} P_{n}(5,0)$, we first find $lim_{n \to \infty} P_{n}(0,R_{1})$, the probability that the chain will be absorbed into $R_{1} = \{0,1\}$. Rearrange $P$ we can write it as 
+\begin{center}
+$ \bf{\tilde{P}}_{\{0,1\}} = 
+    \bordermatrix{ & \{0,1\} & \{2,4\} & 3 & 5 \cr
+      \{0,1\} & 1 & 0 & 0 & 0 \cr
+      \{2,4\} & 0 & 1 & 0 & 0 \cr
+      3 & 0.5 & 0.25 & 0 & 0.25 \cr
+      5 & 0.2 & 0.2 & 0.2 & 0.4}  = \begin{bmatrix}
+    I & 0 \\
+    S & Q 
+\end{bmatrix} $
+      
+
+      
+\end{center}
+Then it follows from $lim_{n \to \infty} \bf{\tilde{P}}^{n} = \begin{pmatrix} I & 0 \\ (I - Q)^{-1}S & 0 \end{pmatrix}$ (see Section 1.5) and 
+\begin{center}
+$(I - Q)^{-1}S = \frac{1}{11} * \begin{pmatrix} 7 & 4 \\ 6 & 5 \end{pmatrix}$ 
+\end{center}
+that $lim_{n \to \infty} P_{n}(5, R_{1}) = \frac{6}{11}$. Combining it with (2) we get $lim_{n \to \infty} P_{n}(5,0) = \frac{6}{11}* \frac{3}{8} = \frac{9}{44} = .2045$
 \end{solution}
 
 
